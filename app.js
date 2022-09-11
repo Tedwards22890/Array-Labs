@@ -196,8 +196,18 @@ function tomatoCheeseResults() {
 let count = tomatoCheeseResults();
 console.log("Foods with tomato and cheese: ", count);
 
-//6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
-//Map
+//6a. Create a function that will return an array of only the names of the cuisine types. 
+//Ie ['Italian', 'Mexican', ...] //Map
+
+let cuisineCount = dishes.map(
+  function(el) 
+  {
+    return `${el.cuisine}`
+  }
+);
+
+console.log("Types: ", cuisineCount);
+
 
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
@@ -217,3 +227,4 @@ console.log("Foods with tomato and cheese: ", count);
 //Must use Reduce, not a loop.
 
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
+
