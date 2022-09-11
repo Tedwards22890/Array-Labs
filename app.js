@@ -149,10 +149,22 @@ function italianResults() {
 }
 
 let italyFood = italianResults();
-console.log("Iltalian Food Greater than 5: ", italyFood);
+console.log("Italian Food Greater than 5: ", italyFood);
 
 //3. Create a function that will return only dishes whose serving id number matches their serving count.
 //Filter
+
+function idResults() {
+  let results = dishes.filter(function (el) {
+    if (el.id == el.servings) {
+      return true;
+    } 
+  });
+  return results;
+}
+
+let servingCount = idResults();
+console.log("Foods that match ID and Serving Size: ", servingCount);
 
 //4. Create a function that will return only dishes whose serving count is even.
 //Filter
