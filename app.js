@@ -272,4 +272,61 @@ console.log("Total serving counts: ", servingAdd);
 
 
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
+function cuisineTypeResults() {
+  let results = dishes.filter(function (el) {
 
+    for (x=0;x<13;x++)
+    {
+      for (y=0;y<13;y++)
+      {
+        if (x!=y)
+        {
+          if (el.cuisine[x]!=el.cuisine[y])
+          {
+            return true;
+          }
+        }
+
+      }
+    }
+  });
+return results;
+}
+
+let bunchofstuff = cuisineTypeResults;
+
+console.log("Here are some: ", bunchofstuff);
+/*
+      if (el.cuisine[x] == "Italian")
+      {
+        typeItalian++;
+      } 
+      else if (el.cuisine[x] == "Mexican")
+      {
+        typeMexican++;
+      } 
+      else if (el.cuisine[x] == "Irish")
+      {
+        typeIrish++;
+      }
+      else if (el.cuisine[x] == "Vegetarian")
+      {
+        typeVegetarian++;
+      }
+      else if (el.cuisine[x] == "Hungarian")
+      {
+        typeHungarian++;
+      }
+      else
+      {
+        typeFrench++;
+      }
+    } 
+    console.log("Dishes with only one cuisine type: ")
+    if (type)
+  return results;
+});
+
+let cuisineTypeCount = cuisineTypeResults();
+console.log("Foods with tomato and cheese: ", cuisineTypeCount);
+*/
